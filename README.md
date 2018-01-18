@@ -14,6 +14,6 @@ Be patient while image generating, its might take quite a time.
 #### Model structure:  
 ![model_structure](model_structure.png)  
 
-#### Example of results:
+#### Results example:
 
 You will find more examples in folders in "out.png" files.
