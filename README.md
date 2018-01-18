@@ -15,5 +15,5 @@ Be patient while image generating, its might take quite a time.
 ![model_structure](model_structure.png)  
 
 #### Results example:
-![exmpls_faces](exmpls_faces.png)  
+![exmpls_cars](exmpls_cars.png)  
 You will find more examples in folders in "out.png" files.
