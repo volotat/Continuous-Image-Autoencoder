@@ -101,7 +101,7 @@ def set_up_model():
 		#We want to increase dimensionality of input position in order to get more sharpest results
 		
 		encoded_ident = Dense(LATENT_SPACE, activation='tanh', name = 'enc_lat')(img_ident_input)  
-		#This layer generate latent space, you could replace it with LATENT_SPACE-dimensional input after training and use it as input
+		#This layer generate latent space
 		
 		encoded = keras.layers.concatenate([encoded_posit, encoded_ident])
 		encoder = Model(inputs, encoded)
