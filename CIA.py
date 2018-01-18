@@ -9,15 +9,16 @@ import math
 import os.path
 import sys
 import winsound
-
-
 from optparse import OptionParser
+
 
 parser = OptionParser()
 parser.add_option("-f", "--dataset", dest="dataset", type="string",
-                  help="Filename of image dataset")
+					help="Filename of image dataset")
 parser.add_option("-e", "--examples", dest="examples", type="int", 
-                  help="Number of examples in dataset")
+					help="Number of examples in dataset")
+parser.add_option("--no-train", dest="train", action="store_false", default=True,
+					help="If only you want is get some results out of pretrained model")
 
 (options, args) = parser.parse_args()
 
@@ -32,8 +33,8 @@ SIGNAL_WHEN_COMPLETE = True
 #INPUT/OUTPUT DATA PARAMETERS
 TRAIN_DATASET = options.dataset #Image set in one image. Should have 10 images in row and as many rows as you want.
 EXAMPLES = options.examples #Number of examples in dataset
+TRAIN = options.train #Set False if only you want is get some results out of pretrained model
 GENERATED_POWER = 2 #(from 1 to inf) if number is bigger, generated results will be closer to original data
-
 size = 200 #Size of single image in input image set
 half_size = math.floor(size / 2)
 
@@ -43,7 +44,6 @@ out_half_size = math.floor(out_size / 2)
 
 #TRAIN INFO
 EPOCHS = 8  #It's better to set epochs number slightly higher if input data not mixed. For me 8-10 for none-mixed and 4 for mixed data works best.
-TRAIN = True #Set False if only you want is get some results out of pretrained model
 ADD_LAYER = True #If set True new layer will be added to the model before each training step
 TRAIN_OLD = True #If set False only new layers will be trained
 MIXED = False #Creates mix of inputs. No precise rule when you should use it, but it useful for face generation as example
