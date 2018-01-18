@@ -3,5 +3,5 @@ Deep learning image generator that not depends on image resolution
 
 
 
-Model structure:
+Model structure:  
 ![model_structure](model_structure.png)  
