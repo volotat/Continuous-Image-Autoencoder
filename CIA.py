@@ -243,7 +243,7 @@ def prepare_data():
 						ind += 1
 						ind_x += 1
 				else:
-					#We need to have different results for same latent space in order to reproduce mix beetween any two images in a right way
+					#We need to have different results for same latent space in order to reproduce mix between any two images in a right way
 					ident_space[ind] = (lat_arr[i] + lat_arr[j]) / 2.
 					image_space[ind]  = im_arr[i]
 					ind += 1
