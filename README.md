@@ -19,4 +19,6 @@ Be patient while image generating, its might take quite a time.
 ![exmpls_cars](exmpls_cars.png)  
 - Faces: 30 examples, 5D Latent space  
 ![exmpls_faces](exmpls_faces.png)  
+
+
 You will find more examples in folders in "out.png" files.
